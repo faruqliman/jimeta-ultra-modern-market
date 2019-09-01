@@ -47,7 +47,7 @@
     <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 		<script type="text/javascript">
 			$(document).ready(()=>{
-				const endpoint = `http://${window.location.hostname}:8000/api/t/`;
+				const endpoint = `http://${window.location.hostname}/api/t/`;
 				$.ajax({
 					url: endpoint,
 					success: (data) => {
@@ -60,23 +60,5 @@
 			    },
 		 	});
 		});
-			// Material Design example
-$(document).ready(function () {
-$('#dtMaterialDesignExample').DataTable();
-$('#dtMaterialDesignExample_wrapper').find('label').each(function () {
-$(this).parent().append($(this).children());
-});
-$('#dtMaterialDesignExample_wrapper .dataTables_filter').find('input').each(function () {
-$('input').attr("placeholder", "Search");
-$('input').removeClass('form-control-sm');
-});
-$('#dtMaterialDesignExample_wrapper .dataTables_length').addClass('d-flex flex-row');
-$('#dtMaterialDesignExample_wrapper .dataTables_filter').addClass('md-form');
-$('#dtMaterialDesignExample_wrapper select').removeClass(
-'custom-select custom-select-sm form-control form-control-sm');
-$('#dtMaterialDesignExample_wrapper select').addClass('mdb-select');
-$('#dtMaterialDesignExample_wrapper .mdb-select').materialSelect();
-$('#dtMaterialDesignExample_wrapper .dataTables_filter').find('label').remove();
-});
 		</script>
 		{% endblock main %}
