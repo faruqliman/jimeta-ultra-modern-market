@@ -2,16 +2,11 @@ const url = 'https://ghfod4drnbgjvg55tv6dtkwqiu.appsync-api.us-east-2.amazonaws.
 const apikey = 'da2-vrrid7kj2vhovlv6fnjecpma6q'
 const region = 'us-east-2'
 
-const myAppConfig = {
-    'aws_appsync_graphqlEndpoint': url,
-    'aws_appsync_region': region,
-    'aws_appsync_authenticationType': 'API_KEY',
-    'aws_appsync_apiKey': apikey,
-}
-
-Amplify.configure(myAppConfig);
-
-
+var opts = {
+  method: "GET",
+  headers: { "key": apikey },
+  body: JSON.stringify({ query: mutation })
+};
 
 
 /*const query = `
