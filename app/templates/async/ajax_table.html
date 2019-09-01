@@ -1,0 +1,14 @@
+{% for v in data %}
+<tr>
+	<td>{{ forloop.counter }}</td>
+	<td>{{ v.v_type }}</td>
+	<td>{{ v.amount }}</td>
+	<td>{{ v.date }}</td>
+	<td>{{ v.user.username }}</td>
+	<td>{{ v.gate }}</td>
+</tr>
+{% empty %}
+<tr>
+<p>No record available</p>
+</tr>
+{% endfor %}
