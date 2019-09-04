@@ -142,6 +142,24 @@
     <script src="{% static 'app/vendors/flot/jquery.flot.time.js' %}"></script>
     <script src="{% static 'app/vendors/flot/jquery.flot.stack.js' %}"></script>
     <script src="{% static 'app/vendors/flot/jquery.flot.resize.js' %}"></script>
+    <link rel="stylesheet" media="screen" href="{% static 'app/vendors/datatables/dataTables.bootstrap.css' %}">
+    <script src="{% static 'app/vendors/datatables/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'app/vendors/datatables/dataTables.bootstrap.js' %}"></script>
+    <script>
+    	$('#myTable').DataTable( {
+		    buttons: [
+		        {
+		            extend: 'print',
+		            text: 'Print current page',
+		            exportOptions: {
+		                modifier: {
+		                    page: 'current'
+		                }
+		            }
+		        }
+		    ]
+		} );
+    </script>
     <script src="{% static 'app/js/custom.js' %}"></script>
     
     {% block js %}
